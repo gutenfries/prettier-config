@@ -1,0 +1,8 @@
+{
+	"name": "prettier-config",
+	"version": "1.0.0",
+	"main": ".prettierrc",
+	"author": "Mark Gutenberger <Mark-Gutenberger@outlook.com>",
+	"description": "My personal Prettier config",
+	"license": "MIT"
+}
