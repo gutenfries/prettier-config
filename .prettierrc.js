@@ -1,4 +1,4 @@
-{
+module.exports = {
 	"$schema": "http://json.schemastore.org/prettierrc",
 	"arrowParens": "always",
 	"bracketSameLine": false,
@@ -60,4 +60,4 @@
 			}
 		}
 	]
-}
+};
