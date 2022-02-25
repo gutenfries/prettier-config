@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: MIT
+# Author: Mark Gutenberger <mark-gutenberger@outlook.com>
+# .yarnrc.yaml (c) 2022
+# Desc: Yarn configuration file
+# Created:  2022-02-25T14:24:49.313Z
+# Modified: 2022-02-25T18:48:07.760Z
+
+npmAuthIdent: $USERNAME:$PASSWORD
+npmAlwaysAuth: true # because we use multiple machines
+npmPublishAccess: public
+npmPublishRegistry: "https://registry.yarnpkg.com"
+npmRegistryServer: "https://registry.yarnpkg.com"
+npmPublishScope: "@mark-gutenberger"
