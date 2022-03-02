@@ -29,5 +29,8 @@
 	"bugs": {
 		"url": "https://github.com/Mark-Gutenberger/prettier-config/issues"
 	},
-	"homepage": "https://github.com/Mark-Gutenberger/prettier-config"
+	"homepage": "https://github.com/Mark-Gutenberger/prettier-config",
+	"publishConfig": {
+		"registry":"https://npm.pkg.github.com"
+	}
 }
