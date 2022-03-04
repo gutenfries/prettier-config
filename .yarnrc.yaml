@@ -8,6 +8,6 @@
 npmAuthIdent: $USERNAME:$PASSWORD
 npmAlwaysAuth: true # because we use multiple machines
 npmPublishAccess: public
-npmPublishRegistry: "https://registry.yarnpkg.com"
-npmRegistryServer: "https://registry.yarnpkg.com"
+npmPublishRegistry: "https://npm.pkg.github.com"
+npmRegistryServer: "https://npm.pkg.github.com"
 npmPublishScope: "@mark-gutenberger"
