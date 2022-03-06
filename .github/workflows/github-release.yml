@@ -3,7 +3,7 @@
 # github-release.yml (c) 2022
 # Desc: description
 # Created:  2022-03-06T06:25:49.008Z
-# Modified: 2022-03-06T07:12:35.162Z
+# Modified: 2022-03-06T07:14:53.295Z
 ---
 name: "pre-release"
 
@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: "Build & test"
         run: |
+          cd ../
           sudo apt install -y nodejs
           export PACKAGE_JSON_VERSION=$(node -p "require('./package.json').version")
       - uses: "marvinpinto/action-automatic-releases@latest"
