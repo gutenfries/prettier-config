@@ -3,7 +3,7 @@
 # github-release.yml (c) 2022
 # Desc: description
 # Created:  2022-03-06T06:25:49.008Z
-# Modified: 2022-03-06T07:30:03.357Z
+# Modified: 2022-03-06T07:32:34.670Z
 ---
 name: "release"
 
@@ -23,6 +23,7 @@ jobs:
           sudo apt install -y nodejs
           wget https://raw.githubusercontent.com/Mark-Gutenberger/prettier-config/master/package.json
           export PACKAGE_JSON_VERSION=$(node -p "require('./package.json').version")
+          printf $PACKAGE_JSON_VERSION
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GH_TOKEN }}"
