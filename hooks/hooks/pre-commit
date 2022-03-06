@@ -1,0 +1,11 @@
+#! /bin/bash
+
+# copy hooks to root folder
+cp ./.git/hooks/ ./hooks/ -a -f -r
+
+# increment version
+if [yarn -v]; then
+	yarn publish --patch
+else
+	printf "Go install yarn you hippie"
+fi
