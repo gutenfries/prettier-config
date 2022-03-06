@@ -1,5 +1,5 @@
 {
-	"name": "mark-gutenberger-prettier-config",
+	"name": "prettier-config",
 	"version": "1.2.2",
 	"main": ".prettierrc.js",
 	"author": "Mark Gutenberger <Mark-Gutenberger@outlook.com>",
