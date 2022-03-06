@@ -3,7 +3,7 @@
 # github-release.yml (c) 2022
 # Desc: description
 # Created:  2022-03-06T06:25:49.008Z
-# Modified: 2022-03-06T06:28:17.106Z
+# Modified: 2022-03-06T06:58:10.890Z
 ---
 name: "pre-release"
 
@@ -25,10 +25,12 @@ jobs:
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
+          run: |
+            export PACKAGE_JSON_VERSION=$(node -p "require('./package.json').version")
           repo_token: "${{ secrets.GH_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: "[${{ env.PACKAGE_JSON_VERSION }}]"
           prerelease: true
-          title: "Development Build"
+          title: "version [${{ env.PACKAGE_JSON_VERSION }}]"
           files: |
             LICENSE.md
             .prettierrc*
