@@ -3,7 +3,7 @@
 # github-release.yml (c) 2022
 # Desc: description
 # Created:  2022-03-06T06:25:49.008Z
-# Modified: 2022-03-06T07:00:55.967Z
+# Modified: 2022-03-06T07:05:21.707Z
 ---
 name: "pre-release"
 
@@ -21,11 +21,10 @@ jobs:
       - name: "Build & test"
         run: |
           export PACKAGE_JSON_VERSION=$(node -p "require('./package.json').version")
-
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GH_TOKEN }}"
-          automatic_release_tag: "[${{ env.PACKAGE_JSON_VERSION }}]"
+          automatic_release_tag: "${{ env.PACKAGE_JSON_VERSION }}"
           prerelease: true
           title: "version [${{ env.PACKAGE_JSON_VERSION }}]"
           files: |
