@@ -3,7 +3,7 @@
 # github-release.yml (c) 2022
 # Desc: description
 # Created:  2022-03-06T06:25:49.008Z
-# Modified: 2022-03-06T07:23:18.079Z
+# Modified: 2022-03-06T07:24:51.801Z
 ---
 name: "release"
 
@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: "Build & test"
         run: |
+          pwd
+          cd ..
+          pwd
           ls
           ls | xargs echo
           # sudo apt install -y nodejs
