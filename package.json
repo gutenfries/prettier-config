@@ -32,6 +32,6 @@
 	"homepage": "https://github.com/Mark-Gutenberger/prettier-config",
 	"publishConfig": {
 		"@mark-gutenberger:registry": "https://npm.pkg.github.com",
-		"registry": "https://npm.pkg.github.com"
+		"registry": "https://npm.pkg.github.com/@mark-gutenberger"
 	}
 }

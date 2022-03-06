@@ -1,3 +1,12 @@
+<!--
+SPDX-License-Identifier: MIT
+Author: Mark Gutenberger <mark-gutenberger@outlook.com>
+LICENSE.md (c) 2022
+Desc: description
+Created:  2022-03-06T04:50:04.829Z
+Modified: 2022-03-06T04:50:43.106Z
+-->
+
 MIT License
 
 Copyright (c) 2022 Mark Gutenberger

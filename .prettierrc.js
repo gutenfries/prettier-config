@@ -4,7 +4,7 @@
  * .prettierrc.js (c) 2022
  * Desc: prettier config file
  * Created:  2022-02-25T14:24:49.313Z
- * Modified: 2022-02-25T14:26:30.058Z
+ * Modified: 2022-03-06T04:49:54.106Z
  */
 module.exports = {
 	$schema: 'http://json.schemastore.org/prettierrc',
