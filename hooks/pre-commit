@@ -1,6 +1,6 @@
 #! /bin/bash
 
-cp ./.git/hooks/ ./hooks/ -a -f -r
+# cp ./.git/hooks/ ./hooks/ -a -f -r
 
 if [yarn -v]; then
 	yarn version --patch
