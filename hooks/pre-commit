@@ -1,9 +1,0 @@
-#! /bin/bash
-
-# cp ./.git/hooks/ ./hooks/ -a -f -r
-
-if [yarn -v]; then
-	yarn version --patch
-else
-	printf "Go install yarn you hippie"
-fi
