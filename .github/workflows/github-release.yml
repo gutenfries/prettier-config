@@ -3,7 +3,7 @@
 # github-release.yml (c) 2022
 # Desc: description
 # Created:  2022-03-06T06:25:49.008Z
-# Modified: 2022-03-06T07:32:34.670Z
+# Modified: 2022-03-08T23:27:22.339Z
 ---
 name: "release"
 on:
@@ -14,7 +14,7 @@ jobs:
   release:
     name: "Release"
     runs-on: "ubuntu-latest"
-    steps:  
+    steps:
       - name: "Build & test"
         run: |
           sudo apt install -y nodejs
@@ -26,8 +26,7 @@ jobs:
         with:
           repo_token: "${{ secrets.GH_TOKEN }}"
           automatic_release_tag: "${{ env.PACKAGE_JSON_VERSION }}"
-          prerelease: true
+          prerelease: false
           title: "version [${{ env.PACKAGE_JSON_VERSION }}]"
           files: |
             LICENSE.md
-            .prettierrc*
