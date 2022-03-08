@@ -6,19 +6,19 @@
 # Modified: 2022-03-06T07:32:34.670Z
 ---
 name: "release"
-
 on:
   push:
     branches:
       - "master"
 jobs:
   release:
-    env:
-      PACKAGE_JSON_VERSION: $(node -p "require('./package.json').version")
     name: "Release"
     runs-on: "ubuntu-latest"
-
-    steps:
+    steps:  
+      - name: "Set env"
+        run: |
+          PACKAGE_JSON_VERSION=$(node -p "require('./package.json').version")
+          echo "PACKAGE_JSON_VERSION=PACKAGE_JSON_VERSION" >> $GITHUB_ENV
       - name: "Build & test"
         run: |
           sudo apt install -y nodejs
