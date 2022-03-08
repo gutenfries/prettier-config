@@ -15,17 +15,13 @@ jobs:
     name: "Release"
     runs-on: "ubuntu-latest"
     steps:  
-      - name: "Set env"
-        run: |
-          pwd
-          ls
-          PACKAGE_JSON_VERSION=$(node -p "require('./package.json').version")
-          echo "PACKAGE_JSON_VERSION=PACKAGE_JSON_VERSION" >> $GITHUB_ENV
       - name: "Build & test"
         run: |
           sudo apt install -y nodejs
           wget https://raw.githubusercontent.com/Mark-Gutenberger/prettier-config/master/package.json
-          printf $PACKAGE_JSON_VERSION
+          PACKAGE_JSON_VERSION=$(node -p "require('./package.json').version")
+          echo "PACKAGE_JSON_VERSION=PACKAGE_JSON_VERSION" >> $GITHUB_ENV
+          printf "PACKAGE_JSON_VERSION:$PACKAGE_JSON_VERSION"
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GH_TOKEN }}"
