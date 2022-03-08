@@ -17,6 +17,8 @@ jobs:
     steps:  
       - name: "Set env"
         run: |
+          pwd
+          ls
           PACKAGE_JSON_VERSION=$(node -p "require('./package.json').version")
           echo "PACKAGE_JSON_VERSION=PACKAGE_JSON_VERSION" >> $GITHUB_ENV
       - name: "Build & test"
