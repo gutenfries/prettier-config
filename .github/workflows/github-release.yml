@@ -20,17 +20,17 @@ jobs:
         run: |
           sudo apt install -y nodejs
           wget https://raw.githubusercontent.com/Mark-Gutenberger/prettier-config/master/package.json
-          PACKAGE_JSON_VERSION=$(node -p "require('./package.json').version")
-          echo "PACKAGE_JSON_VERSION=PACKAGE_JSON_VERSION" >> $GITHUB_ENV
-          printf "PACKAGE_JSON_VERSION:$PACKAGE_JSON_VERSION"
+          version=$(node -p "require('./package.json').version")
+          echo "version=version" >> $GITHUB_ENV
+          printf "version:$version"
       - name: "incriment package.json version"
         id: kjhadfkjhbdfsv
         run: |
-          printf ${{ env.PACKAGE_JSON_VERSION }}
+          printf "version:${{ env.version }}""
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GH_TOKEN }}"
-          automatic_release_tag: "${{ env.PACKAGE_JSON_VERSION }}"
+          automatic_release_tag: "${{ env.version }}"
           prerelease: false
-          title: "${{ env.PACKAGE_JSON_VERSION }}"
+          title: "${{ env.version }}"
 
