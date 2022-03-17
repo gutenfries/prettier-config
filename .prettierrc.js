@@ -4,7 +4,7 @@
  * .prettierrc.js (c) 2022
  * Desc: prettier config file
  * Created:  2022-02-25T14:24:49.313Z
- * Modified: 2022-03-06T04:49:54.106Z
+ * Modified: 2022-03-17T13:27:28.296Z
  */
 module.exports = {
 	$schema: 'http://json.schemastore.org/prettierrc',
@@ -62,7 +62,7 @@ module.exports = {
 			},
 		},
 		{
-			files: ['*.ejs'],
+			files: ['*.ejs', '*.hbs', '*.handlebars'],
 			options: {
 				parser: 'glimmer',
 			},
