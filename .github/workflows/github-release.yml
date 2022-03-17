@@ -3,7 +3,7 @@
 # github-release.yml (c) 2022
 # Desc: description
 # Created:  2022-03-06T06:25:49.008Z
-# Modified: 2022-03-17T13:15:50.221Z
+# Modified: 2022-03-17T13:19:15.877Z
 ---
 name: "release"
 on:
@@ -15,18 +15,7 @@ jobs:
     name: "Release"
     runs-on: "ubuntu-latest"
     steps:
-    # ref:
-    # steps:
-    # - name: Set the value
-    #   id: step_one
-    #   run: |
-    #     echo "action_state=yellow" >> $GITHUB_ENV
-    # - name: Use the value
-    #   id: step_two
-    #   run: |
-        # echo "${{ env.action_state }}" # This will output 'yellow'
-      - name: "Get package.json version"
-        id: kljsdhfkjhbdfkj # unique id
+      - name: "bump patch version"
         run: |
           #! /bin/bash
           sudo apt install -y nodejs
@@ -36,12 +25,11 @@ jobs:
           version=$(node -p "require('./package.json').version")
           echo "version=$version" >> $GITHUB_ENV
           printf "version:$version"
-      - name: "increment package.json version"
-        id: kjhadfkjhbdfsv # unique id
-        run: |
-          #! /bin/bash
-          printf "version:${{ env.version }}"
-          echo "version:${{ env.version }}"
+    #   - name: "verify action"
+    #     run: |
+    #       #! /bin/bash
+    #       printf "version:${{ env.version }}"
+    #       echo "version:${{ env.version }}"
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GH_TOKEN }}"
