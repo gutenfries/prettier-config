@@ -3,7 +3,7 @@
 # github-release.yml (c) 2022
 # Desc: description
 # Created:  2022-03-06T06:25:49.008Z
-# Modified: 2022-03-09T00:11:56.440Z
+# Modified: 2022-03-17T13:06:39.493Z
 ---
 name: "release"
 on:
@@ -15,16 +15,26 @@ jobs:
     name: "Release"
     runs-on: "ubuntu-latest"
     steps:
+    # ref:
+    # steps:
+    # - name: Set the value
+    #   id: step_one
+    #   run: |
+    #     echo "action_state=yellow" >> $GITHUB_ENV
+    # - name: Use the value
+    #   id: step_two
+    #   run: |
+        # echo "${{ env.action_state }}" # This will output 'yellow'
       - name: "Get package.json version"
-        id: kljsdhfkjhbdfkj
+        id: kljsdhfkjhbdfkj # unique id
         run: |
           sudo apt install -y nodejs
           wget https://raw.githubusercontent.com/Mark-Gutenberger/prettier-config/master/package.json
-          version=$(node -p "require('./package.json').version")
-          echo "version=version" >> $GITHUB_ENV
+          $version=$(node -p "require('./package.json').version")
+          echo "version=$version" >> $GITHUB_ENV
           printf "version:$version"
-      - name: "incriment package.json version"
-        id: kjhadfkjhbdfsv
+      - name: "increment package.json version"
+        id: kjhadfkjhbdfsv # unique id
         run: |
           printf "version:${{ env.version }}"
           echo "version:${{ env.version }}"
