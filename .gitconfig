@@ -19,7 +19,3 @@
 	remote = origin
 	merge = refs/heads/master
 	rebase = true
-[branch "fix-`hooks`-symlink-error"]
-	remote = origin
-	merge = refs/heads/fix-`hooks`-symlink-error
-	rebase = true
