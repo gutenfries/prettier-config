@@ -1,0 +1,39 @@
+# SPDX-License-Identifier: MIT
+# Author: Mark Gutenberger <mark-gutenberger@outlook.com>
+# github-release.yml (c) 2022
+# Desc: description
+# Created:  2022-03-06T06:25:49.008Z
+# Modified: 2022-03-17T13:19:15.877Z
+---
+name: "release"
+on:
+  push:
+    branches:
+      - "master"
+jobs:
+  release:
+    name: "Release"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "bump patch version"
+        run: |
+          #! /bin/bash
+          sudo apt install -y nodejs
+          wget https://raw.githubusercontent.com/Mark-Gutenberger/prettier-config/master/package.json
+          yarn
+          yarn version --patch
+          version=$(node -p "require('./package.json').version")
+          echo "version=$version" >> $GITHUB_ENV
+          printf "version:$version"
+    #   - name: "verify action"
+    #     run: |
+    #       #! /bin/bash
+    #       printf "version:${{ env.version }}"
+    #       echo "version:${{ env.version }}"
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GH_TOKEN }}"
+          automatic_release_tag: "${{ env.version }}"
+          prerelease: false
+          title: "${{ env.version }}"
+
