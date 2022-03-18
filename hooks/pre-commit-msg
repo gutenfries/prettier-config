@@ -4,7 +4,7 @@
 # pre-commit-msg (c) 2022
 # Desc: description
 # Created:  2022-03-18T13:15:07.513Z
-# Modified: 2022-03-18T13:17:16.955Z
+# Modified: 2022-03-18T13:24:17.761Z
 
 printf "Error:\nDo not use `git commit`.\nrun `yarn commit` instead.\n"
 exit 1
