@@ -1,10 +1,10 @@
 #! /bin/bash
 # SPDX-License-Identifier: MIT
 # Author: Mark Gutenberger <mark-gutenberger@outlook.com>
-# pre-commit (c) 2022
+# pre-push (c) 2022
 # Desc: description
 # Created:  2022-03-17T14:00:56.216Z
-# Modified: 2022-03-18T13:08:15.159Z
+# Modified: 2022-03-18T13:10:02.351Z
 
 printf "executing pre-commit hook"
 npm version patch
