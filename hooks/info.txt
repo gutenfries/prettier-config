@@ -1,8 +1,0 @@
-# SPDX-License-Identifier: MIT
-# Author: Mark Gutenberger <mark-gutenberger@outlook.com>
-# info.txt (c) 2022
-# Desc: description
-# Created:  2022-03-17T13:29:26.127Z
-# Modified:2022-03-17T13:29:42.913Z
-
-customixed directory for git hooks.
