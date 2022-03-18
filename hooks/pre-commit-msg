@@ -1,0 +1,10 @@
+#! /bin/bash
+# SPDX-License-Identifier: MIT
+# Author: Mark Gutenberger <mark-gutenberger@outlook.com>
+# pre-commit-msg (c) 2022
+# Desc: description
+# Created:  2022-03-18T13:15:07.513Z
+# Modified: 2022-03-18T13:17:16.955Z
+
+printf "Error:\nDo not use `git commit`.\nrun `yarn commit` instead.\n"
+exit 1
