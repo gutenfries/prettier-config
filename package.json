@@ -1,0 +1,33 @@
+{
+	"name": "@mark-gutenberger/prettier-config",
+	"version": "1.2.8",
+	"main": ".prettierrc.js",
+	"author": "Mark Gutenberger <Mark-Gutenberger@outlook.com>",
+	"description": "My personal Prettier config",
+	"license": "MIT",
+	"devDependencies": {
+		"prettier": "^2.5.1"
+	},
+	"scripts": {
+		"test": "echo \"Warn: no test specified\"",
+		"format": "prettier --write ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Mark-Gutenberger/prettier-config.git"
+	},
+	"keywords": [
+		"prettier",
+		"prettier-config",
+		"eslint",
+		"mark-gutenberger",
+		"yarn",
+		"npm",
+		"javascript",
+		"prettier.io"
+	],
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com",
+		"name": "@mark-gutenberger/prettier-config"
+	}
+}
