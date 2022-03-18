@@ -1,10 +1,9 @@
+#! /bin/bash
 # SPDX-License-Identifier: MIT
 # Author: Mark Gutenberger <mark-gutenberger@outlook.com>
 # pre-commit (c) 2022
 # Desc: description
 # Created:  2022-03-17T14:00:56.216Z
-# Modified: 2022-03-18T12:57:56.597Z
-
-#! /bin/bash
-
+# Modified: 2022-03-18T13:03:43.349Z
+pwd
 npm version patch
