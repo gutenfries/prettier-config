@@ -4,6 +4,7 @@
 # pre-commit (c) 2022
 # Desc: description
 # Created:  2022-03-17T14:00:56.216Z
-# Modified: 2022-03-18T13:03:43.349Z
-pwd
+# Modified: 2022-03-18T13:06:45.106Z
+
+printf "executing pre-commit hook"
 npm version patch
