@@ -13,5 +13,5 @@ jobs:
       uses: elgohr/Github-Release-Action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-#       with:
-#         args:
+      with:
+        args: "your mom"
