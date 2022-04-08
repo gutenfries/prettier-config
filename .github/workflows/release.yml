@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: "debug..."
-      run: pwd && ls
+      run: cat package.json
     - name: Create a Release
       # uses: actions/checkout@master
       uses: elgohr/Github-Release-Action@master  
